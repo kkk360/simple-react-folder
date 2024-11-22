@@ -23,7 +23,7 @@
   },
   "scripts": {
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "npm run compile && tsc -watch -p ./"
   },
   "devDependencies": {
     "@types/vscode": "^1.80.0",
