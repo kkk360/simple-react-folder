@@ -1,13 +1,15 @@
 {
   "name": "simple-react-folder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "displayName": "Simple React Folder",
   "icon": "icon.jpg",
   "main": "./out/extension.js",
   "description": "Create React component folder with empty files",
   "publisher": "wangxiaohai",
   "license": "MIT",
-  "activationEvents":["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "npm run compile && tsc -watch -p ./",
