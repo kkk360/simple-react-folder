@@ -1,18 +1,23 @@
 {
   "name": "simple-react-folder",
-  "displayName": "Simple React Folder",
-  "icon": "./icon.jpg",
-  "description": "Create React component folder with empty files",
   "version": "0.0.1",
+  "displayName": "Simple React Folder",
+  "icon": "icon.jpg",
+  "main": "./out/extension.js",
+  "description": "Create React component folder with empty files",
   "publisher": "wangxiaohai",
-  "engines": {
-    "vscode": "^1.80.0"
+  "license": "MIT",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "npm run compile && tsc -watch -p ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkk360/simple-react-folder"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
@@ -29,17 +34,12 @@
       ]
     }
   },
-  "scripts": {
-    "compile": "tsc -p ./",
-    "watch": "npm run compile && tsc -watch -p ./"
+  "engines": {
+    "vscode": "^1.80.0"
   },
   "devDependencies": {
     "@types/vscode": "^1.80.0",
     "@types/node": "^16.0.0",
     "typescript": "^5.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kkk360/simple-react-folder"
   }
 }
