@@ -3,6 +3,7 @@
   "displayName": "Simple React Folder",
   "description": "Create React component folder with empty files",
   "version": "0.0.1",
+  "publisher": "kkk360",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -29,5 +30,9 @@
     "@types/vscode": "^1.80.0",
     "@types/node": "^16.0.0",
     "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkk360/simple-react-folder"
   }
 }
