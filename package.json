@@ -1,25 +1,32 @@
 {
   "name": "simple-react-folder",
   "displayName": "Simple React Folder",
+  "icon": "./icon.jpg",
   "description": "Create React component folder with empty files",
   "version": "0.0.1",
   "publisher": "wangxiaohai",
   "engines": {
     "vscode": "^1.80.0"
   },
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [{
-      "command": "simple-react-folder.create",
-      "title": "New React Component"
-    }],
-    "menus": {
-      "explorer/context": [{
+    "commands": [
+      {
         "command": "simple-react-folder.create",
-        "group": "navigation"
-      }]
+        "title": "New React Component"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "simple-react-folder.create",
+          "group": "navigation"
+        }
+      ]
     }
   },
   "scripts": {
