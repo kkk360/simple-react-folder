@@ -7,9 +7,12 @@
   "description": "Create React component folder with empty files",
   "publisher": "wangxiaohai",
   "license": "MIT",
+  "activationEvents":["onStartupFinished"],
   "scripts": {
     "compile": "tsc -p ./",
-    "watch": "npm run compile && tsc -watch -p ./"
+    "watch": "npm run compile && tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "npm version patch && vsce publish"
   },
   "repository": {
     "type": "git",
