@@ -28,10 +28,14 @@ export function activate(context: vscode.ExtensionContext) {
         const folderPath = path.join(targetUri.fsPath, componentName);
         fs.mkdirSync(folderPath);
 
+        // 获取配置的样式文件扩展名
+        const config = vscode.workspace.getConfiguration('simpleReactFolder');
+        const styleExtension = config.get<string>('styleFileExtension', '.scss');
+
         // 创建 index.tsx 并添加模板内容
         const indexTsxContent =
 `import React from 'react';
-import Style from './index.module.scss';
+import Style from './index.module${styleExtension}';
 
 interface ${componentName}Props {
     // define your props here
@@ -49,13 +53,14 @@ export default ${componentName};
 `;
         fs.writeFileSync(path.join(folderPath, "index.tsx"), indexTsxContent);
 
-        // 创建 index.module.scss 并添加基础样式
-        const scssContent = `.${componentName} {
+        // 创建样式文件并添加基础样式
+        const styleContent = `.${componentName} {
     // add your styles here
 }`;
+        const styleFileName = `index.module${styleExtension}`;
         fs.writeFileSync(
-          path.join(folderPath, "index.module.scss"),
-          scssContent
+          path.join(folderPath, styleFileName),
+          styleContent
         );
 
         // 获取创建的文件夹的 URI

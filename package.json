@@ -1,10 +1,10 @@
 {
   "name": "simple-react-folder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "displayName": "Simple React Folder",
   "icon": "icon.jpg",
   "main": "./out/extension.js",
-  "description": "Create React component folder with empty files",
+  "description": "Quickly create React component folders with TypeScript and CSS modules. Supports customizable style file extensions (.scss, .css, .less, .sass).",
   "publisher": "wangxiaohai",
   "license": "MIT",
   "activationEvents": [
@@ -20,10 +20,33 @@
     "type": "git",
     "url": "https://github.com/kkk360/simple-react-folder"
   },
+  "keywords": [
+    "react",
+    "typescript",
+    "component",
+    "scaffold",
+    "scss",
+    "css",
+    "folder",
+    "generator"
+  ],
   "categories": [
+    "Programming Languages",
+    "Snippets",
     "Other"
   ],
   "contributes": {
+    "configuration": {
+      "title": "Simple React Folder",
+      "properties": {
+        "simpleReactFolder.styleFileExtension": {
+          "type": "string",
+          "default": ".scss",
+          "description": "File extension for the style file (e.g., .scss, .css, .less)",
+          "pattern": "^\\.(scss|css|less|sass)$"
+        }
+      }
+    },
     "commands": [
       {
         "command": "simple-react-folder.create",
