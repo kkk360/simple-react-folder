@@ -50,13 +50,21 @@
     "commands": [
       {
         "command": "simple-react-folder.create",
-        "title": "New React Component"
+        "title": "Create Component"
+      },
+      {
+        "command": "simple-react-folder.createPage",
+        "title": "Create Page"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "command": "simple-react-folder.create",
+          "group": "navigation"
+        },
+        {
+          "command": "simple-react-folder.createPage",
           "group": "navigation"
         }
       ]
