@@ -1,6 +1,6 @@
 {
   "name": "simple-react-folder",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "displayName": "Simple React Folder",
   "icon": "icon.jpg",
   "main": "./out/extension.js",
