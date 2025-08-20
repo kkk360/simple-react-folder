@@ -41,7 +41,7 @@ interface ${componentName}Props {
     // define your props here
 }
 
-export const ${componentName}: React.FC<${componentName}Props> = () => {
+const ${componentName}: React.FC<${componentName}Props> = () => {
     return (
         <div className={Style.${componentName}}>
             ${componentName} Component
