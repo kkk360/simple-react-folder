@@ -5,7 +5,7 @@
   "icon": "icon.jpg",
   "main": "./out/extension.js",
   "description": "Quickly create React component folders with TypeScript and CSS modules. Supports customizable style file extensions (.scss, .css, .less, .sass).",
-  "publisher": "Bryel",
+  "publisher": "wangxiaohai",
   "license": "MIT",
   "activationEvents": [
     "onStartupFinished"
